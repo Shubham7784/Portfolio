@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}About Me - Shubham Sharma Portfolio{% endblock %}
+
+{% block content %}
+<section class="page-section">
+    <div class="container about-me-content">
+        <div class="about-me-image">
+            <!-- Update this path to your actual profile picture in static/img/ -->
+            <img src="{{ url_for('static', filename='img/profile_img.jpg') }}" alt="Shubham Sharma">
+        </div>
+        <div class="about-me-text">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm Shubham Sharma, a Computer Applications graduate with a passion for building impactful, user-friendly solutions. My experience is centered around Android Development, Machine Learning, and Backend Development.
+            </p>
+            <p>
+                I thrive on solving complex problems and have a strong foundation in technologies like Python, Java, Spring Boot, and SQL. Through various projects and internships, I've gained hands-on experience in developing and optimizing applications, from creating machine learning models to predict ad revenue to enhancing the performance of Python-based systems.
+            </p>
+            <p>
+                As an award-winning hackathon participant, I'm always eager to learn and apply new technologies to create robust and efficient applications. I'm currently seeking opportunities to contribute my skills to a challenging and innovative team.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- My Skills (from Resume) -->
+<section class="page-section bg-darker">
+    <div class="container">
+        <h2 class="text-center">My Skills</h2>
+        <div class="skills-grid">
+            <!-- Backend & ML -->
+            <div class="skills-category">
+                <h3>Backend & Machine Learning</h3>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Spring Boot</span>
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">Java</span>
+            </div>
+            <!-- Android Development -->
+            <div class="skills-category">
+                <h3>Android Development</h3>
+                <span class="skill-tag">Android Development</span>
+                <span class="skill-tag">Kotlin</span>
+                <span class="skill-tag">Jetpack Compose</span>
+                <span class="skill-tag">XML</span>
+            </div>
+            <!-- Database & Tools -->
+            <div class="skills-category">
+                <h3>Database & Tools</h3>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">Git / GitHub</span>
+                <span class="skill-tag">Firebase</span>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Freelancer Portfolio{% endblock %}</title>
+    <!-- Link to our CSS file -->
+    <link rel="shortcut icon" href="{{url_for('static',filename='img/favicon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Google Fonts (Optional, but matches the design) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <!-- UPDATED NAME HERE -->
+                <a href="{{ url_for('home') }}" class="nav-logo">Shubham Sharma</a>
+
+                <!-- MOBILE BURGER MENU -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span> <!-- This span creates the burger lines -->
+                </label>
+
+                <!-- Navigation Menu (Desktop & Mobile) -->
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="{{ url_for('home') }}" class="{{ 'active' if request.path == url_for('home') else '' }}">Home</a></li>
+                        <li><a href="{{ url_for('portfolio') }}" class="{{ 'active' if request.path == url_for('portfolio') else '' }}">Portfolio</a></li>
+                        <li><a href="{{ url_for('about') }}" class="{{ 'active' if request.path == url_for('about') else '' }}">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Block -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-copyright">
+                <p>&copy; 2025 Shubham's Portfolio. All rights reserved.</p>
+            </div>
+            <div class="footer-social">
+                <h4>Connect With Me</h4>
+                <!-- Replace # with your actual links from your resume -->
+                <a href="https://github.com/Shubham7784"><img src="{{url_for('static',filename='img/gitIcon.png')}}" alt="Github Icon" id="social-git-icon"></a>
+                <a href="https://www.instagram.com/shubhamsharma_1105/"><img src="{{url_for('static',filename='img/instagram_icon.png')}}" alt="Instagram Icon" id="social-insta-icon"></a>
+                <a href="https://www.linkedin.com/in/shubham-sharma-a089b4277/"><img src="{{url_for('static',filename='img/linkedIn_icon.png')}}" alt="LinkedIn Icon" id="social-linkedIn-icon"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

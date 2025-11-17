@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Portfolio - Shubham Sharma{% endblock %}
+
+{% block content %}
+<section class="page-section">
+    <div class="container">
+        <h2 class="text-center">Portfolio</h2>
+
+        <div class="portfolio-grid-full">
+            <div class="portfolio-card">
+                <img src="{{ url_for('static', filename='img/WhatsApp Clone.png') }}" alt="Whatsapp Clone">
+                <div class="card-content">
+                    <span class="card-tag">Android Development</span>
+                    <h3>WhatsApp Clone</h3>
+                    <p>Implemented WhatsApp like UI using Kotlin & Jetpack Compose</p>
+                    <a href="https://github.com/Shubham7784/WhatsAppClone" class="view-project">View Project &rarr;</a>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="{{ url_for('static', filename='img/library-management-ss.png') }}" alt="Library Management System">
+                <div class="card-content">
+                    <span class="card-tag">Flask</span>
+                    <h3>Library Management System</h3>
+                    <p>Implemented required facilites of a Library using Flask & HTML, CSS</p>
+                    <a href="https://github.com/Shubham7784/Shubham7784/tree/main/Library%20Management" class="view-project">View Project &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
